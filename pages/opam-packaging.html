@@ -136,7 +136,7 @@ install: [
 
 url {
   src: "https://github.com/$YOU/foo/archive/1.0.0.tar.gz"
-  checksum: "sha256=133f2c6de1b9b35c0b26ab3e21fa86a351fffb415d20cae714b015f95fbc3725"
+  checksum: "sha512=b701796db4358e4b9142b0cb9d4897ef2cd404a86a43ddbceb7d4f65c17970166d8d6d270d7d252f4e8d456fd4ed28b75a16cdcd3e839e3f9cf4a2c083f81086"
 }
 
 tags: [
@@ -157,7 +157,7 @@ The last two fields are of particular interest:
     It must have at least the following fields:
     the <code>src</code> field with the URL of the package archive,
     and the <code>checksum</code> field with the checksum of that archive
-    prefixed by <code>sha256=</code>.
+    prefixed by <code>sha512=</code>.
   </li>
 
   <li>
@@ -170,11 +170,11 @@ The last two fields are of particular interest:
 
 <p>The checksum can be obtained with:</p>
 
-<pre><code>curl -L https://github.com/$YOU/foo/archive/1.0.0.tar.gz | sha256sum
+<pre><code>curl -L https://github.com/$YOU/foo/archive/1.0.0.tar.gz | sha512sum
 </code></pre>
 
 <p>In the <code>opam</code> file, the checksum must be prefixed with the
-hashing algorithm, here <code>sha256=</code>. (<code>sha512=</code>, and
+hashing algorithm, here <code>sha512=</code>. (<code>sha256=</code>, and
 <code>md5=</code> are also supported.)
 </p>
 
